@@ -9,4 +9,5 @@ gem 'sinatra-contrib'
 gem 'rspec'
 gem 'capybara'
 gem 'webrick'
+gem 'pg'
 
