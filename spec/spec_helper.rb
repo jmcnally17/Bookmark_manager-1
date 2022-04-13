@@ -7,6 +7,8 @@ require 'capybara'
 require 'capybara/rspec'
 require 'rspec'
 require_relative './setup_test_database'
+require_relative './features/web_helper_spec'
+require_relative './features/database_helpers'
 
 
 
