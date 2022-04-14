@@ -33,4 +33,26 @@ describe Bookmark do
       expect(Bookmark.all).to be_empty
     end
   end
+
+  describe '.update' do
+    it 'updates a bookmark' do
+      bookmark = Bookmark.create(title: 'YouTuse', url: 'http://youtuse.com')
+      updated_bookmark = Bookmark.update(id: bookmark.id, title: 'YouTube', url: 'http://youtube.com')
+      expect(updated_bookmark).to be_a Bookmark
+      expect(updated_bookmark.id).to eq bookmark.id
+      expect(updated_bookmark.title).to eq 'YouTube'
+      expect(updated_bookmark.url).to eq 'http://youtube.com'
+    end
+  end
+
+  describe '.find' do
+    it 'finds a bookmark' do
+      bookmark = Bookmark.create(title: 'YouTube', url: 'http://youtube.com')
+      found_bookmark = Bookmark.find(id: bookmark.id)
+      expect(found_bookmark).to be_a Bookmark
+      expect(found_bookmark.id).to eq bookmark.id
+      expect(found_bookmark.title).to eq 'YouTube'
+      expect(found_bookmark.url).to eq 'http://youtube.com'
+    end
+  end
 end
