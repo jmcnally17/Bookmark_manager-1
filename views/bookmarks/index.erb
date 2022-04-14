@@ -1,20 +1,24 @@
 <h2>Bookmarks</h2>
 
-<p>
-<%@bookmarks.each do |bookmark|%> 
-<p>
-<a href="<%=bookmark.url%>">
-<%=bookmark.title%></a>
-</p>
-<% end %></p>
+<ul>
+  <% @bookmarks.each do |bookmark| %>
+    <li>
+      <a href="<%= bookmark.url %>">
+        <%= bookmark.title %>
+      </a>
+    </li>
+  <% end %>
+</ul>
 
 <form action='/bookmarks_new' method='post' >
-  <label for='new bookmark'>
+  <label for='title'>
     Please enter a title:
-    <input type='text' name='title'>
-    Please enter a url:
-    <input type='text' name='url'>
   </label>
+  <input type='text' name='title'>
+  <label for='url'>
+    Please enter a url:
+  </label>
+  <input type='text' name='url'>
   <input type='submit' value='Submit'>
   </form>
 

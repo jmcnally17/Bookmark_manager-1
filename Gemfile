@@ -1,13 +1,16 @@
 # frozen_string_literal: true
 
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
 # gem "rails"
 
+gem 'capybara'
+gem 'pg'
+gem 'rspec'
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem 'rspec'
-gem 'capybara'
 gem 'webrick'
-gem 'pg'
 
+group :development, :test do
+  gem "rubocop", "1.20"
+end
