@@ -1,6 +1,4 @@
-require './app'
-require './lib/bookmark'
-require 'pg'
+require_relative '../lib/bookmark'
 
 describe Bookmark do
   describe '.all' do
@@ -25,6 +23,14 @@ describe Bookmark do
       expect(bookmark.id).to eq persisted_data['id']
       expect(bookmark.title).to eq 'YouTube'
       expect(bookmark.url).to eq 'http://youtube.com'
+    end
+  end
+
+  describe '.delete' do
+    it 'deletes a bookmark' do
+      bookmark = Bookmark.create(title: 'YouTube', url: 'http://youtube.com')
+      Bookmark.delete(id: bookmark.id)
+      expect(Bookmark.all).to be_empty
     end
   end
 end
