@@ -1,6 +1,7 @@
 require 'sinatra/base'
 require 'sinatra/reloader'
-require './lib/bookmark'
+require_relative './lib/bookmark'
+require_relative './database_connection_setup'
 
 class BookmarkManager < Sinatra::Base
   enable :method_override
@@ -9,7 +10,7 @@ class BookmarkManager < Sinatra::Base
   end
 
   get '/' do
-    'This is your bookmark manager'
+    erb :index
   end
 
   get '/bookmarks' do

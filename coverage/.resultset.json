@@ -93,25 +93,6 @@
           null
         ]
       },
-      "/Users/joemcnally/Desktop/projects/week_4/Bookmark_manager-1/lib/connection_database.rb": {
-        "lines": [
-          1,
-          null,
-          1,
-          1,
-          3,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null,
-          1,
-          1,
-          null,
-          null
-        ]
-      },
       "/Users/joemcnally/Desktop/projects/week_4/Bookmark_manager-1/spec/features/add_bookmark_spec.rb": {
         "lines": [
           1,
@@ -199,6 +180,6 @@
         ]
       }
     },
-    "timestamp": 1650038594
+    "timestamp": 1650040294
   }
 }

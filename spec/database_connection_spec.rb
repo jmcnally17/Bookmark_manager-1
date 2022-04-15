@@ -1,4 +1,4 @@
-require_relative '../lib/connection_database'
+require_relative '../lib/database_connection'
 
 describe DatabaseConnection do
   let(:name) { 'bookmark_manager_test' }

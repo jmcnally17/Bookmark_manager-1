@@ -14,7 +14,7 @@
       <img src="./assets/0.12.3/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" class="hide">
-      <div class="timestamp">Generated <abbr class="timeago" title="2022-04-15T17:03:14+01:00">2022-04-15T17:03:14+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2022-04-15T17:31:34+01:00">2022-04-15T17:31:34+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
@@ -30,7 +30,7 @@
      covered at
      <span class="covered_strength">
        <span class="green">
-         1.04
+         1.03
        </span>
     </span> hits/line
     )
@@ -39,12 +39,12 @@
   <a name="AllFiles"></a>
 
   <div>
-    <b>8</b> files in total.
+    <b>7</b> files in total.
   </div>
 
   <div class="t-line-summary">
-    <b>113</b> relevant lines,
-    <span class="green"><b>113</b> lines covered</span> and
+    <b>105</b> relevant lines,
+    <span class="green"><b>105</b> lines covered</span> and
     <span class="red"><b>0</b> lines missed. </span>
     (<span class="green">
   100.0%
@@ -69,17 +69,6 @@
         </tr>
       </thead>
       <tbody>
-        
-          <tr class="t-file">
-            <td class="strong t-file__name"><a href="#e519a4402137d7a65105de12738c0431f7a616aa" class="src_link" title="lib/connection_database.rb">lib/connection_database.rb</a></td>
-            <td class="green strong cell--number t-file__coverage">100.00 %</td>
-            <td class="cell--number">15</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">8</td>
-            <td class="cell--number">0</td>
-            <td class="cell--number">1.25</td>
-            
-          </tr>
         
           <tr class="t-file">
             <td class="strong t-file__name"><a href="#47b0a2ff4b207fb3959f7f65c8a2c5355ce5d15f" class="src_link" title="spec/bookmark_spec.rb">spec/bookmark_spec.rb</a></td>
@@ -174,202 +163,6 @@
       </div>
 
       <div class="source_files">
-      
-        <div class="source_table" id="e519a4402137d7a65105de12738c0431f7a616aa">
-  <div class="header">
-    <h3>lib/connection_database.rb</h3>
-    <h4>
-      <span class="green">
-  100.0%
-</span>
-
-      lines covered
-    </h4>
-
-    
-
-    <div class="t-line-summary">
-      <b>8</b> relevant lines.
-      <span class="green"><b>8</b> lines covered</span> and
-      <span class="red"><b>0</b> lines missed.</span>
-    </div>
-
-    
-
-  </div>
-
-  <pre>
-    <ol>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="1">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">require &#39;pg&#39;</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="2">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="3">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">class DatabaseConnection</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="4">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.setup(name:)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="3" data-linenumber="5">
-            <span class="hits">3</span>
-            
-
-            
-
-            <code class="ruby">    @connection = PG.connect(dbname: name)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="6">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="7">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="8">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  class &lt;&lt; self</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="9">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    attr_reader :connection</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="10">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="11">
-            
-            
-
-            
-
-            <code class="ruby"></code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="12">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">  def self.query(sql:, params: [])</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="covered" data-hits="1" data-linenumber="13">
-            <span class="hits">1</span>
-            
-
-            
-
-            <code class="ruby">    @connection.exec_params(sql, params)</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="14">
-            
-            
-
-            
-
-            <code class="ruby">  end</code>
-          </li>
-        </div>
-      
-        <div>
-          <li class="never" data-hits="" data-linenumber="15">
-            
-            
-
-            
-
-            <code class="ruby">end</code>
-          </li>
-        </div>
-      
-    </ol>
-  </pre>
-</div>
-
       
         <div class="source_table" id="47b0a2ff4b207fb3959f7f65c8a2c5355ce5d15f">
   <div class="header">
@@ -1073,7 +866,7 @@
 
             
 
-            <code class="ruby">require_relative &#39;../lib/connection_database&#39;</code>
+            <code class="ruby">require_relative &#39;../lib/database_connection&#39;</code>
           </li>
         </div>
       
